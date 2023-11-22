@@ -6,24 +6,25 @@ const handler = NextAuth({
     CredentialsProvider({
       name: "Credentials",
       credentials: {
-        email: { label: "email", type: "email", placeholder: "test@test.com" },
+        username: { label: "Username", type: "text"},
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials, req) {
         const res = await fetch(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/login`,
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/users/signIn`,
           {
             method: "POST",
             body: JSON.stringify({
-              email: credentials?.email,
+              username: credentials?.username,
               password: credentials?.password,
             }),
             headers: { "Content-Type": "application/json" },
           }
         );
         const user = await res.json();
-        console.log(user);
 
+        console.log(user)
+          
         if (user.error) throw user;
 
         return user;
@@ -31,17 +32,19 @@ const handler = NextAuth({
     }),
   ],
   callbacks: {
-    async jwt({ token, user }) {
-      return { ...token, ...user };
+    async jwt({ token, user }: any) {
+      if (user) {
+        token.accessToken = user.accessToken; 
+      }
+      return token;
     },
-    async session({ session, token }) {
-      session.user = token as any;
-      return session;
+    async session({ session, token }: any) {
+       session.accessToken = token.accessToken; 
+       return session;
     },
   },
-  pages: {
-    signIn: "/login",
-  },
+  
 });
 
 export { handler as GET, handler as POST };
+

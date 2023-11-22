@@ -1,12 +1,14 @@
+import * as React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
-
-import Navbar from "@/components/Navbar";
 import SessionAuthProvider from "@/context/SessionAuthProvider";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import Toolbar from '@mui/material/Toolbar';
+import AppBar from '@mui/material/AppBar';
+import '@/styles/styles.css'
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,13 +22,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <main className="container">
-          <SessionAuthProvider>
-            <Navbar />
-            {children}
+      <body>
+        <SessionAuthProvider>
+                <Grid container component="main" sx={{maxHeight: '100vh'}} >
+                    <Box sx={{ flexGrow: 1 }}>
+                        <AppBar style={{ backgroundColor: '#0A233F' }} position="static">
+                            <Toolbar>
+                                <Typography  variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                                    <span className='invierte' style={{ fontWeight: 400 }}>UNITED</span> <span className='invierte' style={{ fontWeight: 'bold' }}>CAPITAL</span>
+                                </Typography>
+                            </Toolbar>
+                        </AppBar>
+                    </Box>
+                   {children}
+                </Grid>
           </SessionAuthProvider>
-        </main>
       </body>
     </html>
   );

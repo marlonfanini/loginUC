@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap');
+
+.containerscroll::-webkit-scrollbar {
+  width: 4px; 
+}
+
+.containerscroll::-webkit-scrollbar-track {
+  background: #00ADD8;
+  
+  width: 200px;
+}
+
+.containerscroll::-webkit-scrollbar-thumb {
+  background: #FFF;
+  border-radius: 100px;
+  height: 0;
+  width: 2000px; 
+}
+
+
+
+
+input {
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  height: 38px;
+  width: 100%;
+  border: 1px solid;
+  border-radius: 100px;
+  background-color: rgba(109, 110, 113, 0.60);
+  color: white;
+  margin-bottom: 25px;
+}
+
+input:focus {
+  outline: none;
+}
+
+::placeholder {
+  font-size: small;
+  font-weight: 600;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.buttonlogin {
+  background-color: #00ADD8;
+  color: #fff;
+  border: none;
+  display: flex;
+  margin: 20px auto;
+  border-radius: 10px;
+  width: 140px;
+  height: 39.046px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 700;
+
+}
+
+.buttonloginAgenda {
+  background-color: #0A233F;
+  color: #fff;
+  margin-top: 3px;
+  border: 1px solid #00ADD8;
+  display: flex;
+  border-radius: 20px;
+  width: 200px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: #0A233F;
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hazteclient {
+  font-family: 'Montserrat', sans-serif;
+}
+.hazteclient1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+}
+
+.buttonloginAgenda1 {
+  background-color: #0A233F;
+  color: #fff;
+  margin-top: 215px;
+  display: flex;
+  width: 155px;
+  height: 30px;
+  border-radius: 10px;
+  border: 2px solid #00ADD8;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: #0A233F;
+  margin-bottom: 40px;
+  gap: 3px;
+  font-size: 12px;
+
+}
+
+.buttonloginAgenda12 {
+  background-color: #0A233F;
+  color: #fff;
+  margin-top: 20px;
+  display: flex;
+  width: 155px;
+  height: 30px;
+  border-radius: 10px;
+  border: 2px solid #00ADD8;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: #0A233F;
+  margin-bottom: 40px;
+}
+
+
+.buttontipodecuenta {
+  background-color: #FFFFFF;
+  width: 160px;
+  height: 38px;
+  border-radius: 20px;
+  color: #0A233F;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.buttontipodecuenta1 {
+  background-color: #EAF7FF;
+  width: 160px;
+  height: 38px;
+  border-radius: 20px;
+  color: #0A233F;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+.boton-con-senal {
+  display: inline-block;
+  position: relative;
+}
+
+.senal {
+  position: absolute;
+  bottom: 20;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #EAF7FF;
+
+}
+
+.buttonRef {
+  width: 327px;
+  height: 38px;
+  border-radius: 20px;
+  border: none;
+  border-radius: 30px;
+  background: #00ADD8;
+  color: #fff;
+  font-weight: 600;
+}
+
+
+.buttontipodecuenta,
+.buttontipodecuenta1 {
+  transition: all 0.3s ease;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0vh;
+  width: 100vw;
+  position: relative;
+}
+
+.contenedor1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.buttonRef1 {
+  background-color: #FFFFFF;
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  color: #061a33;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: left;
+}
+
+.buttonRef12 {
+  background-color: #FFFFFF;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 30px;
+  width: 327px;
+  height: 38px;
+  margin: 2px auto;
+  color: #0A233F;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+
+.buttonRef1:hover {
+  background-color: #EAF7FF;
+  border-radius: 30px;
+}
+
+.dropdownContainer {
+  position: absolute;
+  background-color: #FFFFFF;
+  padding: 10px;
+  display: flex;
+  width: 410px;
+  flex-direction: column;
+  border-radius: 25px;
+  border: 1px solid rgba(109, 110, 113, 0.60);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  top: 20px;
+ 
+  left: 50%;
+ 
+  transform: translateX(-50%);
+}
+
+
+
+.images {
+  width: 24px;
+  height: 24px;
+}
+
+
+.checkbox-container {
+  width: 20px; 
+  height: 20px; 
+  border: 2px solid #0A233F; 
+  border-radius: 50%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s; 
+}
+
+.checkbox-container.checked {
+  background-color: #0A233F; 
+}
+
+.checkmark {
+  font-size: 13px; 
+  color: white;
+  font-weight: bold;
+  display: none; 
+}
+
+.containerCheck {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.checkbox-container.checked .checkmark {
+  display: block; 
+}
+
+.buttonlogin:hover {
+  background-color: #0A233F;
+}
+
+.buttonloginAgenda:hover {
+  background-color: #00ADD8;
+}
+
+.buttonloginAgenda1:hover {
+  background-color: #00ADD8;
+}
+.buttonloginAgenda12:hover {
+  background-color: #00ADD8;
+}
+
+.asesoria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+
+}
+
+.iniciosesion {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.olvidaste {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+}
+.olvidaste1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+}
+
+.invierte {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.asesoriaAgenda {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.embla {
+  overflow: hidden;
+  position: relative;
+}
+
+.embla__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.embla__button--prev {
+  left: 0; 
+  margin-left:19px ;
+}
+
+.embla__button--next {
+  right: 0; 
+  margin-right:19px ;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background-color: #00ADD8; 
+  border-radius: 50px;
+}
+
+.embla__slide {
+
+  flex: 0 0 100%;
+  min-width: 0;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.modal-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 0vh;
+  width: 100vw;
+  background-color: blue;
+  z-index: 1000;
+}
+
+.containerscroll {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+
+
+@media (max-width: 300px) {
+  .mt-3 {
+    margin-top: 3px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mt-2 {
+    margin-top: 2px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .mt-5 {
+    margin-top: 40px;
+  }
+
+  .container {
+    margin-left: 80px;
+    width: 650px;
+    height: 273px;
+    border-radius: 25px;
+  }
+
+  .InvierteConProp {
+    margin-top: 70px;
+  }
+
+
+  .pasoapaso {
+    width: 423px;
+  }
+
+  .margindiv {
+    margin-right: 60px;
+  }
+  
+  .asesoriaAgenda {
+    margin-top: 7;
+  }
+
+  .triangulo {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #00ADD8;
+    margin-left: 650px;
+  }
+  
+
+}
+
+@media (max-width: 900px) {
+  .hide-carousel {
+    display: none;
+  }
+}
+
+@media (min-width: 1920px) {
+  .mt-6 {
+    margin-top: 100px;
+  }
+
+  .mb-1 {
+    margin-bottom: 1px;
+  }
+
+  .re {
+    margin-top: 40px;
+    height: 30px
+  }
+
+  .InvierteConProp {
+    margin-top: 210px;
+  }
+
+  .container {
+    margin-left: 240px;
+    width: 650px;
+    height: 430px;
+  }
+
+  .pasoapaso {
+    width: 550px;
+    margin-top: 20px;
+  }
+
+  .margindiv {
+    margin-right: 230px;
+  }
+
+  .containerscroll {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .asesoriaAgenda {
+    margin-top: 75px;
+  }
+
+  .triangulo {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #00ADD8;
+    margin-left: 800px;
+  }
+    
+}
+
+.my-recaptcha {
+  transform: scale(0.8);
+  transform-origin: 0 0; 
+}

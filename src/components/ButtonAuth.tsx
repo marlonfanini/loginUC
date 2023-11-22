@@ -1,6 +1,8 @@
 "use client";
 
+import classNames from "classnames";
 import { signIn, signOut, useSession } from "next-auth/react";
+import '@/styles/styles.css'
 
 export default function ButtonAuth() {
   const { data: session, status } = useSession();
@@ -26,13 +28,7 @@ export default function ButtonAuth() {
   }
   return (
     <>
-      Not signed in <br />
-      <button
-        onClick={() => signIn()}
-        className="btn btn-primary"
-      >
-        Sign in
-      </button>
+      <button onClick={() => signIn()} style={{fontWeight: '500', fontSize: '14px'}} className={classNames('olvidaste', 'buttonlogin')}><b>Iniciar Sesión</b></button>
     </>
   );
 }
