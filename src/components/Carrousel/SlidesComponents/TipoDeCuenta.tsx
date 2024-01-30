@@ -50,7 +50,7 @@ function Requisitos({ requisitos }: any) {
 function TipoDeCuenta() {
 
   const [selectedAccount, setSelectedAccount] = useState('Profesional Asalariado');
-  const [buttonOrder, setButtonOrder] = useState(['Cuenta Ágil', 'Cuenta Física', 'Cuenta Jurídica']);
+  const [buttonOrder, setButtonOrder] = useState([ 'Cuenta Física', 'Cuenta Jurídica']);
   const [showtab, setshowTab] = useState(false);
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
@@ -58,14 +58,11 @@ function TipoDeCuenta() {
 
   const handleButtonClick = (accountType: any) => {
     setSelectedAccount(accountType);
-    if (accountType === 'Cuenta Ágil') {
-      setButtonOrder(['Cuenta Física', 'Cuenta Ágil', 'Cuenta Jurídica']);
-      setDropdownVisible(false);
-    } else if (accountType === 'Cuenta Física') {
-      setButtonOrder(['Cuenta Ágil', 'Cuenta Física', 'Cuenta Jurídica']);
+    if (accountType === 'Cuenta Física') {
+      setButtonOrder(['Cuenta Física', 'Cuenta Jurídica']);
       setDropdownVisible(!isDropdownVisible);
     } else if (accountType === 'Cuenta Jurídica') {
-      setButtonOrder(['Cuenta Ágil', 'Cuenta Jurídica', 'Cuenta Física'])
+      setButtonOrder([ 'Cuenta Jurídica', 'Cuenta Física'])
       setDropdownVisible(false);
     } else {
       setDropdownVisible(false);
@@ -130,7 +127,7 @@ function TipoDeCuenta() {
 
               <div className='containerscroll' style={{ overflow: 'auto' }} >
                 <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginBottom: '20px' }}>
-                  <button className={classNames('invierte', 'buttonRef12')}>{selectedAccount === 'Cuenta Ágil' ? 'CLIENTE ÁGIL' : selectedAccount === 'Cuenta Jurídica' ? 'PERSONA JURÍDICA NACIONAL' : selectedAccount}</button>
+                  <button className={classNames('invierte', 'buttonRef12')}>{selectedAccount === 'Cuenta Jurídica' ? 'PERSONA JURÍDICA NACIONAL' : selectedAccount}</button>
                 </div>
 
                 {
@@ -151,7 +148,7 @@ function TipoDeCuenta() {
             <div className="triangulo"></div>
             </div>
             {
-              selectedAccount === 'Cuenta Jurídica' || selectedAccount === 'Cuenta Ágil' ? (
+              selectedAccount === 'Cuenta Jurídica'  ? (
                 <div className={classNames('invierte', 'margindiv')} style={{
                   display: 'flex',
                   flexDirection: 'row',
@@ -227,7 +224,7 @@ function TipoDeCuenta() {
 
               <div className="triangle"></div>
               <div className='animate__animated animate__fadeInDown' style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', gap: '2px', }}>
-                <button className={classNames('invierte', 'buttonRef')}>{selectedAccount === 'Cuenta Ágil' ? 'CLIENTE ÁGIL' : selectedAccount === 'Cuenta Jurídica' ? 'PERSONA JURÍDICA NACIONAL' : selectedAccount}</button>
+                <button className={classNames('invierte', 'buttonRef')}>{selectedAccount === 'Cuenta Jurídica' ? 'PERSONA JURÍDICA NACIONAL' : selectedAccount}</button>
               </div>
             </div>
             <div className={classNames('invierte', 'container')} style={{ display: 'flex', flexDirection: 'column' , marginTop: '4px'}}>
@@ -248,7 +245,7 @@ function TipoDeCuenta() {
 
 
               {
-                selectedAccount === 'Cuenta Jurídica' || selectedAccount === 'Cuenta Ágil' ? (
+                selectedAccount === 'Cuenta Jurídica'  ? (
                   <div className={'invierte'} style={{
                     display: 'flex',
                     flexDirection: 'row',

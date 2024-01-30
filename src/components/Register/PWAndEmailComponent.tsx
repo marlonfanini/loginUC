@@ -182,25 +182,25 @@ export default function PwAndEmailComponentRegister() {
       </div>
 
       <Grid className='olvidaste' sx={{ mt: 4, textAlign: 'center' }} item xs>
-                <span className='olvidaste1' style={{ textDecoration: 'none'}}>  ¿Ya tiene una cuenta? </span>
+        <span className='olvidaste1' style={{ textDecoration: 'none' }}>  ¿Ya tiene una cuenta? </span>
 
-                <Link className='olvidaste' style={{
-                  color: '#0A233F',
-                  textDecorationColor: '#0A233F',
-                  fontWeight: 'bold',
-                  fontSize: '14px'
-                }}
-                  href="/" >Inicie sesion aqui</Link>
-              </Grid>
+        <Link className='olvidaste' style={{
+          color: '#0A233F',
+          textDecorationColor: '#0A233F',
+          fontWeight: 'bold',
+          fontSize: '14px'
+        }}
+          href="/" >Inicie sesion aqui</Link>
+      </Grid>
 
-            
-      <div className='my-recaptcha' style={{ marginTop: '40px' }}>
+
+      <div style={{ width: 'fit-content', margin: '0 auto', transform: 'scale(0.8)', transformOrigin: 'center' }}>
         <ReCAPTCHA
           sitekey="6LdKIggpAAAAAGWOyp0NsFxneeE4hG1oqUzIAMA3"
         />
       </div>
 
-      <CheckBoxComponent/>
+      <CheckBoxComponent />
 
     </>
   );

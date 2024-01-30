@@ -17,9 +17,6 @@
   width: 2000px; 
 }
 
-
-
-
 input {
   padding: 0.5rem 0.75rem;
   font-size: 1rem;
@@ -240,7 +237,7 @@ input:focus {
   background-color: #FFFFFF;
   padding: 10px;
   display: flex;
-  width: 410px;
+  width: 343px;
   flex-direction: column;
   border-radius: 25px;
   border: 1px solid rgba(109, 110, 113, 0.60);
@@ -262,8 +259,8 @@ input:focus {
 
 
 .checkbox-container {
-  width: 20px; 
-  height: 20px; 
+  width: 22px; 
+  height: 21px; 
   border: 2px solid #0A233F; 
   border-radius: 50%; 
   display: flex;
@@ -416,6 +413,20 @@ input:focus {
 @media (max-width: 600px) {
   .mt-2 {
     margin-top: 2px;
+  }
+  br {
+    display: none;
+  }
+  .checkbox-container {
+    width: 40px; 
+    height: 20px; 
+    border: 2px solid #0A233F; 
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s; 
   }
 }
 

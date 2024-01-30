@@ -10,7 +10,7 @@ import '@/styles/styles.css'
 function FormComponent2() {
   return (
     <>
-      <Grid item  xs={12} sm={8} md={5}  component={Paper} elevation={6} square>
+      <Grid item  xs={12} sm={8} md={5}  component={Paper} elevation={6} square >
         <Box
           sx={{
             my: 2,
@@ -28,7 +28,7 @@ function FormComponent2() {
               mt: 7.5
             },
             '@media (min-width: 1920px)': {
-              mt: '130px',
+              mt: '160px',
             }
           }}
          

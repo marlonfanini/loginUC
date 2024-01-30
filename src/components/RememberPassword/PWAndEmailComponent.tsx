@@ -21,7 +21,7 @@ export default function PwAndEmailComponentRegister() {
             />
 
 
-            <div className='my-recaptcha' style={{ marginTop: '3px' }}>
+            <div style={{ width: 'fit-content', margin: '0 auto', transform: 'scale(0.8)', transformOrigin: 'center' }}>
                 <ReCAPTCHA
                     sitekey="6LdKIggpAAAAAGWOyp0NsFxneeE4hG1oqUzIAMA3"
                 />

@@ -5,10 +5,6 @@ import CarouselComponent from '@/components/Carrousel/CarouselComponent';
 import NewRemember from '@/components/RememberPassword/NewRememberPassword';
 
 
-
-
-
-
 export default function SignInSide() {
 
     return (

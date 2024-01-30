@@ -77,7 +77,7 @@ const HomePage = () => {
           <CarouselComponent />
         </Grid>
 
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square style={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
           <Box
             sx={{
               my: 6,
@@ -85,11 +85,9 @@ const HomePage = () => {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              '@media (max-width: 300px)': {
-                mt: 3,
-              },
+  
               '@media (max-width: 600px)': {
-                mt: 2,
+                mt: 18,
               },
               '@media (min-width: 1366px)': {
                 mt: 7
@@ -105,6 +103,7 @@ const HomePage = () => {
             <Typography className='iniciosesion' style={{ marginTop: '20px', color: '#0A233F' }} component="h1" variant="h6">
               INICIO DE SESIÓN
             </Typography>
+
 
             <Box sx={{ mt: 3 }}>
 
